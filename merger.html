@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add text</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            background-color: red;
+        }
+
+        .flex-container>div {
+            /*div children of the flex container*/
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+            .flex-container {
+                flex-direction: column;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <h1>Ramakotireddy Ragipindi builds a merger</h1>
+    <div class="flex-container" id="target">
+        <div>row item 1</div>
+        <div>row item 2</div>
+        <div>row item 3</div>
+    </div>
+<input type="text" id="value" value="enter text element"><br>
+    <button onclick="addend()">Add end</button>
+
+   
+
+
+</body>
+<script>
+
+
+    function addend() {
+        word= document.getElementById("value").value;
+        result= document.createElement("div");
+        result.innerHTML = word;
+        result.className = "merger";
+        flex_container = document.getElementById("target");
+        flex_container.appendChild(result);
+    }
+
+    
+
+
+    </script>
+
+
+</html>
