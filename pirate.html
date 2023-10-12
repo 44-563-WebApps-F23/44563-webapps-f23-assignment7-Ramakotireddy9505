@@ -127,6 +127,8 @@
     </div>
 
 
+    <button class="btn btn-danger btn-start-timer" onclick="newGame()">New Game</button>
+
 
     <!----js for above code  --->
     <script>
@@ -139,6 +141,8 @@
         var treasureLocation = 5;
         var trapLocation = 18;
         var gameOver = false;
+
+       
 
         // adding function 
         function check(position) {
@@ -211,9 +215,33 @@
             document.getElementById("penalty").textContent = `penalty is  ${penalty}`;
             document.getElementById("help").textContent = helpText;
 
-            document.getElementById("help").onclick = help;
+            document.getElementById("").onclick = help;
 
         }
+
+
+
+        function newGame() {
+        checkCount = 0;
+        penalty = 0;
+        lastCheck = 0;
+        treasureLocation = Math.floor(Math.random() * 25);
+        trapLocation = Math.floor(Math.random() * 25);
+    
+        document.getElementById("locations").innerHTML = "Number of locations checked is : " + checkCount;
+        document.getElementById("penalty").innerHTML = "Penalty is : " + penalty;
+    
+        var imageElements = document.getElementsByTagName("img");
+        for (let i = 0; i < imageElements.length; i++) {
+            imageElements[i].src = "location.jpg";
+        }
+        gameOver = false;
+
+
+        document.getElementById("locations").innerHTML = "Number of locations checked is : " + checkCount;
+        document.getElementById("penalty").innerHTML = "Penalty is : " + penalty;
+    }
+
     </script>
 
 

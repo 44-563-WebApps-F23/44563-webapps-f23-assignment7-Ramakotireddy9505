@@ -60,6 +60,13 @@
     <br><br>
     <button onclick="addFront()" class="btn btn-primary">Add front</button>
 
+    <p>Press the button to swap the elements</p>
+        <button onclick="swap()" class=" btn btn-danger">Swap</button>
+
+
+
+   
+
 
 
 
@@ -95,6 +102,18 @@
         firstChild = flex.firstChild;
         flex.insertBefore(result, firstChild);
     }
+
+    function swap() {
+            let mergerItems = document.getElementsByClassName("merger");
+            let length = mergerItems.length;
+            let item = document.getElementsByClassName("merger")[Math.floor(Math.random() * length)];
+            let flex = document.getElementById("target");
+            firstChild = flex.firstChild;
+            flex.insertBefore(item, firstChild);
+    }
+
+
+
 
 
 </script>
